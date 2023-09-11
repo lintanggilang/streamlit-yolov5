@@ -31,5 +31,4 @@ if uploaded_file is not None:
         st.write(f"Deteksi {class_name} dengan confidence {confidence:.2f}")
 
 if __name__ == '__main__':
-    st.sidebar.info('This app is created using YoloV5 and Streamlit')
-    st.sidebar.info('For any queries/suggestions please reach out at [your_email@domain.com]')
+    st.sidebar.info('Created by Lintang Gilang')
