@@ -1,29 +1,3 @@
-print('start')
-
-import subprocess
-
-def run_command(cmd):
-    """Fungsi untuk menjalankan perintah dan mencetak kesalahan jika ada."""
-    result = subprocess.run(cmd, capture_output=True, text=True)
-    if result.returncode != 0:
-        print(f"Error executing: {' '.join(cmd)}")
-        print(result.stderr)
-        return False
-    else:
-        print(result.stdout)
-        return True
-
-commands = [
-    ['apt-get', 'update'],
-    ['apt-get', 'install', '-y', 'python3-opencv'],
-    ['pip', 'install', 'opencv-python']
-]
-
-for cmd in commands:
-    success = run_command(cmd)
-    if not success:
-        break
-
 import streamlit as st
 import torch
 from PIL import Image
