@@ -28,7 +28,7 @@ if uploaded_file is not None:
         confidence = item[4]
         class_id = int(item[5])
         class_name = model.names[class_id]
-        st.write(f"Deteksi {class_name} dengan confidence {confidence:.2f}")
+        st.write(f"Object {class_name} with confidence {confidence:.2f}")
 
 if __name__ == '__main__':
     st.sidebar.info('Created by Lintang Gilang')
